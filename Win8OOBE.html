@@ -121,7 +121,6 @@
         <span id="oobeword1"></span>
         <span id="oobeword2"></span>
     <div id="oobeend"></div>
-</body>
     <script>
         function changertp() {
             window.temp_i = window.temp_i + 1;
@@ -239,3 +238,16 @@
         oobeword01.style.display = "block";
         changertp();
     </script>
+</body>
+
+<script type="text/javascript">
+var message="抱歉，右键已被禁止"; 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+</script>  
