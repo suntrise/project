@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8" />
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="320" name="MobileOptimized">
+<title>随机数生成器</title>
+<body>
+	<a href="https://suntrise.github.io/">← 回到主页</a>
+	<h2>随机数生成器 by STR</h2>
+	最小值：<input type="" name="" id="ranmin" value="0">
+	<br><br>
+	最大值：<input type="" name="" id="ranmax" value="100">
+	<br><br>
+	生成个数：<input type="" name="" id="rangs" value="1">
+	<br><br>
+	<button style="font-size: 20px;" id="ranbt" onclick="random()" disabled><b>生成随机数</b></button>
+	<br><br>
+	结果：<b id="ranshow" style="font-size: 30px;"></b>
+	<br><br><br>
+	<a href="https://github.com/suntrise/">GitHub 主页</a>
+</body>
+
+<style type="text/css">
+	body{
+		font-size: 20px;
+		background: #eee;
+	}
+	a{
+		text-decoration: none;
+	}
+	input{
+		font-size: 25px;
+	}
+	button{
+		padding: 20px;
+		color: #fff;
+		border: 2px solid #07d;
+		border-radius: 5px;
+		background: #07d;
+	}
+	button:hover {
+    border: 2px solid #fff;
+}
+</style>
+
+<script type="text/javascript">
+	var min = 0
+	var max = 0
+	var ran = 0
+	var gs = 0
+	var ranstr = ""
+	var ctd = setInterval(ranch,1)
+function ranch() {
+	min = Math.floor(ranmin.value)
+	max = Math.floor(ranmax.value)
+	if(min>max){
+		ranbt.disabled = true;
+		ranshow.innerHTML = "最小值不能大于最大值！"
+	}
+	else{
+		ranbt.disabled = "";
+		ranshow.innerHTML = ranstr;
+	}
+}
+function random() {
+	ranstr = "";
+    while(gs<rangs.value){
+    	min = Math.floor(ranmin.value)
+		max = Math.floor(ranmax.value)
+    	ran = Math.round(min+Math.random()*(max-min))
+    	gs++
+    	ranstr += ran +" ";
+    }
+    if (gs==rangs.value) {
+    	gs=0
+    	ranshow.innerHTML = ranstr;
+    }
+}
+</script>
