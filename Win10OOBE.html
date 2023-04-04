@@ -1,160 +1,272 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Win10OOBE</title>
-
+    <title>Windows 10 OOBE</title>
+    <!--WMProject1217 Studios-->
     <style type="text/css">
-     #Win10oobe{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        color: #fff;
-        background: #000;
-        cursor: none;
-        animation: oobe 5s linear infinite 5s ;
-
-     }
-	#oobeend{
-	display: none;;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        color: #fff;
-        background: #000;
-        cursor: none;
+        * {
+            font-family: 微软雅黑;
+            cursor: none;
         }
-     @keyframes oobe{
-      0%   {
-        background:#00498B;
-      }
-      50%  {
-        background:#006CCE;
-      }
-      100% {
-        background:#00498B;
-      }
-
-     }
-#oobeword01,#oobeword02{
-      position: absolute;
-      top: 44.5%;
-      left: 0%;
-      width: 100%;
-      font-family: 微软雅黑;
-      font-weight: 100;
-      text-align: center;
-      font-size: 50px;
-      animation: oobe0 2s infinite 1s;
-      z-index: 1000;
-     }
-     #oobeword1{
-      position: absolute;
-      top: 44.5%;
-      left: 0%;
-      width: 100%;
-      font-family: 微软雅黑;
-      font-weight: 100;
-      text-align: center;
-      font-size: 50px;
-      animation: oobe1 30s infinite 5s;
-      z-index: 1000;
-     }
-    #oobeword2{
-      position: absolute;
-      bottom: 5%;
-      left: 0%;
-      width: 100%;
-      font-family: 微软雅黑;
-      font-weight: 100;
-      text-align: center;
-      font-size: 30px;
-      z-index: 1000;
-     }
-    @keyframes oobe1{
-      0%{
-        opacity: 0;
-      }
-      6%{
-        opacity: 1;
-      }
-    }
-     @keyframes oobe0{
-      0%{
-        opacity: 0;
-      }
-      90%{
-        opacity: 1;
-      }
-    }
-
+        body {
+            color: #FFFFFF;
+        }
+        body.xgoing0 {
+            background-color: #000000;
+        }
+        body.xgoing1 {
+            transition: all .7s;
+            background-color: #000000;
+            animation: xgoing1ani 5s linear infinite 0s;
+        }
+        @keyframes xgoing1ani {
+            0% {
+                background: #00498B;
+            }
+            50% {
+                background: #006CCE;
+            }
+            100% {
+                background: #00498B;
+            }
+        }
     </style>
-  </head>
+        <style type="text/css">
 
-  <body>
-<div id="Win10oobe">
-<span id="oobeword01"></span>
-<span id="oobeword02"></span>
-<span id="oobeword1"></span>
-<span id="oobeword2"></span>
-</div>
-<div id="oobeend"></div>
-  </body>
-
-</html>
-
-<script type="text/javascript">
-  var oobesec=0
-  function win10oobe() {
-    oobesec++
-    if (oobesec>=1) {
-      oobeword01.innerHTML="嗨，别来无恙啊！"
-    }    
-    if (oobesec>=3) {
-      oobeword01.innerHTML=""
-      oobeword02.innerHTML="一切即将准备就绪"
-    }
-    if (oobesec>=5) {
-      oobeword2.innerHTML="请勿关闭电脑。"
-      oobeword01.innerHTML=""
-     oobeword02.innerHTML=""
-      oobeword1.innerHTML="这可能需要几世纪"
-    }
-    if (oobesec>=35) {
-      oobeword1.innerHTML="一切交给我们来处理"
-      oobeword2.innerHTML="请勿关闭电脑。"
-    }    
-    if (oobesec>=65) {
-      oobeword1.innerHTML="千门万户曈曈日，总把新桃换旧符<br>Windows将保持bug最多状态，为你的网络之旅设置障碍"
-      oobeword2.innerHTML="请勿关闭电脑。"     
-      //oobeword1.innerHTML="苟利PC生死以，岂因bug避趋之<br>这些更新能为你提供更多的bug"
-    }  
-
-  if (oobesec>=95) {
-      oobeword1.innerHTML="马上就好"
-      oobeword2.innerHTML=""
-      oobeend.style.display="block";
-    }  
-    if (oobesec>=100) {
-       location.reload() 
-    }
-  }
-var oob=setInterval(win10oobe,1000)
-</script>
-
-<script type="text/javascript">
-var message="抱歉，右键已被禁止"; 
-function clickIE() {if (document.all) {(message);return false;}} 
-function clickNS(e) {if 
-(document.layers||(document.getElementById&&!document.all)) { 
-if (e.which==2||e.which==3) {(message);return false;}}} 
-if (document.layers) 
-{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
-else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
-document.oncontextmenu=new Function("return false") 
-</script>
+    
+            #oobeend {
+                display: none;
+                ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                color: #fff;
+                background: #000;
+                /*cursor: none;*/
+            }
+    
+            @keyframes oobe {
+                0% {
+                    background: #00498B;
+                }
+                50% {
+                    background: #006CCE;
+                }
+                100% {
+                    background: #00498B;
+                }
+            }
+    
+            #oobeword01,
+            #oobeword02 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 50px;
+                z-index: 1000;
+            }
+    
+            #oobeword1 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 50px;
+                z-index: 1000;
+            }
+    
+            #oobeword2 {
+                display: none;
+                position: absolute;
+                bottom: 5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 20px;
+                z-index: 1000;
+            }
+    
+            @keyframes oobe1 {
+                0% {
+                    opacity: 0;
+                }
+                6% {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes oobe0 {
+                0% {
+                    opacity: 0;
+                }
+                90% {
+                    opacity: 1;
+                }
+            }
+        </style>
+</head>
+<body class="xgoing0">
+        <span id="oobeword01"></span>
+        <span id="oobeword02"></span>
+        <span id="oobeword1"></span>
+        <span id="oobeword2"></span>
+    <div id="oobeend"></div>
+    <script>
+        function changertp() {
+            window.temp_i = window.temp_i + 1;
+            oobeword01.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp2();", 3000);
+                return 0;
+            }
+            setTimeout("changertp();", 12);
+        }
+        function changertp2() {
+            window.temp_i = window.temp_i - 1;
+            oobeword01.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword01.innerHTML = ""
+                oobeword01.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('oobeword02.innerHTML = "一切即将准备就绪";oobeword02.style.display = "block";changertp3();', 128);
+                return 0;
+            }
+            setTimeout("changertp2();", 12);
+        }
+        function changertp3() {
+            window.temp_i = window.temp_i + 1;
+            oobeword02.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp4();", 3000);
+                return 0;
+            }
+            setTimeout("changertp3();", 12);
+        }
+        function changertp4() {
+            window.temp_i = window.temp_i - 1;
+            oobeword02.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword02.innerHTML = ""
+                oobeword02.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('document.getElementsByTagName("body")[0].className="xgoing1";oobeword2.innerHTML = "请勿关闭电脑";oobeword1.innerHTML = "这可能需要几分钟";oobeword1.style.display = "block";oobeword2.style.display = "block";changertp5();', 128);
+                return 0;
+            }
+            setTimeout("changertp4();", 12);
+        }
+        function changertp5() {
+            window.temp_i = window.temp_i + 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            oobeword2.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp6();", 30000);
+                return 0;
+            }
+            setTimeout("changertp5();", 12);
+        }
+        function changertp6() {
+            window.temp_i = window.temp_i - 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword1.innerHTML = ""
+                oobeword1.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('oobeword1.innerHTML = "一切交给我们来处理";oobeword1.style.display = "block";oobeword2.style.display = "block";changertp7();', 128);
+                return 0;
+            }
+            setTimeout("changertp6();", 12);
+        }
+        function changertp7() {
+            window.temp_i = window.temp_i + 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp8();", 30000);
+                return 0;
+            }
+            setTimeout("changertp7();", 12);
+        }
+        function changertp8() {
+            window.temp_i = window.temp_i - 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword1.innerHTML = ""
+                oobeword1.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('oobeword1.style.top = "38.7%";oobeword1.innerHTML = "千门万户曈曈日，总把新桃换旧符<br>Windows 将保持 bug 最多状态，为你的网络之旅设置障碍";oobeword1.style.display = "block";oobeword2.style.display = "block";changertp9();', 128);
+                return 0;
+            }
+            setTimeout("changertp8();", 12);
+        }
+        function changertp9() {
+            window.temp_i = window.temp_i + 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp10();", 30000);
+                return 0;
+            }
+            setTimeout("changertp9();", 12);
+        }
+        function changertp10() {
+            window.temp_i = window.temp_i - 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword1.innerHTML = ""
+                oobeword1.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('document.getElementsByTagName("body")[0].className="xgoing0";oobeword1.style.top = "44.5%";oobeword1.innerHTML = "马上就好";oobeword1.style.display = "block";oobeword2.innerHTML = "";oobeword2.style.display = "none";changertp11();', 128);
+                return 0;
+            }
+            setTimeout("changertp10();", 12);
+        }
+        function changertp11() {
+            window.temp_i = window.temp_i + 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp12();", 5000);
+                return 0;
+            }
+            setTimeout("changertp11();", 12);
+        }
+        function changertp12() {
+            //alert("Unexpected Error\nWindows not installed.");
+            location.reload();
+        }
+        window.temp_i = 0;
+        oobeword01.innerHTML = "嗨，别来无恙啊！"
+        oobeword01.style.display = "block";
+        changertp();
+//oobeword1.innerHTML="苟利PC生死以，岂因bug避趋之<br>这些更新能为你提供更多的bug"
+    </script>
+</body>
