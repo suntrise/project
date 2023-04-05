@@ -104,10 +104,10 @@ function getText() {
                 oobeword1.innerHTML = ""
                 oobeword1.style.display = "none";
                 window.temp_i = 0;
-                sto=setTimeout('document.getElementById("xgoing").className="xgoing0";oobeword1.style.top = "44.5%";oobeword1.innerHTML = end;oobeword1.style.display = "block";oobeword2.innerHTML = "";oobeword2.style.display = "none";changertp11();', 128);
+                sto=setTimeout('document.getElementById("xgoing").className="xgoing0";oobeword1.style.top = "44.5%";oobeword1.innerHTML = end;oobeword1.style.display = "block";oobeword2.innerHTML = "";oobeword2.style.display = "none";changertp9();', 128);
                 return 0;
             }
-            sto=setTimeout("changertp10();", 12);
+            sto=setTimeout("changertp8();", 12);
         }
         function changertp9() {
             window.temp_i = window.temp_i + 1;
