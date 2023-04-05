@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Windows 8 OOBE</title>
+    <!--WMProject1217 Studios-->
+    <style type="text/css">
+        * {
+            font-family: "微软雅黑","Microsoft YaHei","Segoe UI","Lucida Grande",Helvetic,aArial,"FreeSans","Arimo","Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","Arial","sans-serif";
+            cursor: none;
+        }
+        body {
+            color: #FFFFFF;
+        }
+        body.xgoing0 {
+            background-color: #000000;
+        }
+        body.xgoing1 {
+            transition: all .7s;
+            background-color: #000000;
+            animation: xgoing1ani 20s linear infinite 0s;
+        }
+        @keyframes xgoing1ani {
+      0%   {
+        background:green;
+      }
+      20%  {
+        background:#287BB5;
+      }
+      40%  {
+        background:#601EB3;
+      }
+      60%  {
+        background:#f03;
+      }
+      75%{
+        background: #FB0;
+      }
+      90%{
+        background: #23B9A0;
+      }
+      100% {
+        background:green;
+      }
+     }
+    </style>
+        <style type="text/css">
+            #oobeend {
+                display: none;
+                ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                color: #fff;
+                background: #000;
+                /*cursor: none;*/
+            }
+      #oobeword01,#oobeword02 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 55px;
+                z-index: 1000;
+            }
+            #oobeword1 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 55px;
+                z-index: 1000;
+            }
+    
+            #oobeword2 {
+                display: none;
+                position: absolute;
+                bottom: 5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 30px;
+                z-index: 1000;
+            }
+    
+            @keyframes oobe1 {
+                0% {
+                    opacity: 0;
+                }
+                6% {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes oobe0 {
+                0% {
+                    opacity: 0;
+                }
+                90% {
+                    opacity: 1;
+                }
+            }
+        </style>
+</head>
+<body class="xgoing0">
+        <span id="oobeword01"></span>
+        <span id="oobeword02"></span>
+        <span id="oobeword1"></span>
+        <span id="oobeword2"></span>
+    <div id="oobeend"></div>
+    <script>
+        function changertp() {
+            window.temp_i = window.temp_i + 1;
+            oobeword01.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp2();", 2000);
+                return 0;
+            }
+            setTimeout("changertp();", 12);
+        }
+        function changertp2() {
+            window.temp_i = window.temp_i - 1;
+            oobeword01.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword01.innerHTML = ""
+                oobeword01.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('oobeword02.innerHTML = "We‘re setting things up for you";oobeword02.style.display = "block";changertp3();', 128);
+                return 0;
+            }
+            setTimeout("changertp2();", 12);
+        }
+        function changertp3() {
+            window.temp_i = window.temp_i + 1;
+            oobeword02.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp4();", 3000);
+                return 0;
+            }
+            setTimeout("changertp3();", 12);
+        }
+        function changertp4() {
+            window.temp_i = window.temp_i - 1;
+            oobeword02.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword02.innerHTML = ""
+                oobeword02.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('document.getElementsByTagName("body")[0].className="xgoing1";oobeword1.innerHTML = "Installing apps";oobeword2.innerHTML = "This might take a few minutes";oobeword1.style.display = "block";oobeword2.style.display = "block";changertp5();', 128);
+                return 0;
+            }
+            setTimeout("changertp4();", 12);
+        }
+        function changertp5() {
+            window.temp_i = window.temp_i + 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            oobeword2.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp6();", 60000);
+                return 0;
+            }
+            setTimeout("changertp5();", 12);
+        }
+        function changertp6() {
+            window.temp_i = window.temp_i - 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword1.innerHTML = ""
+                oobeword1.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('oobeword1.innerHTML = "Getting your apps ready";oobeword2.innerHTML = "This might take a few minutes";oobeword1.style.display = "block";oobeword2.style.display = "block";changertp7();', 128);
+                return 0;
+            }
+            setTimeout("changertp6();", 12);
+        }
+        function changertp7() {
+            window.temp_i = window.temp_i + 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp8();", 30000);
+                return 0;
+            }
+            setTimeout("changertp7();", 12);
+        }
+        function changertp8() {
+            window.temp_i = window.temp_i - 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 0) {
+                oobeword1.innerHTML = ""
+                oobeword1.style.display = "none";
+                window.temp_i = 0;
+                setTimeout('document.getElementsByTagName("body")[0].className="xgoing0";oobeword1.style.top = "44.5%";oobeword1.innerHTML = "Let’s start";oobeword1.style.display = "block";oobeword2.innerHTML = "";oobeword2.style.display = "none";changertp9();', 128);
+                return 0;
+            }
+            setTimeout("changertp8();", 12);
+        }
+        function changertp9() {
+            window.temp_i = window.temp_i + 1;
+            oobeword1.style.opacity = (window.temp_i/100);
+            console.log(window.temp_i);
+            if (window.temp_i == 100) {
+                window.temp_i = 100;
+                setTimeout("changertp10();", 5000);
+                return 0;
+            }
+            setTimeout("changertp9();", 12);
+        }
+        function changertp10() {
+            location.reload();
+        }
+        window.temp_i = 0;
+        oobeword01.innerHTML = "Hi"
+        oobeword01.style.display = "block";
+        changertp();
+    </script>
+</body>

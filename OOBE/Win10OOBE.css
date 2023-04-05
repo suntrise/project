@@ -1,0 +1,128 @@
+        * {
+            font-family: "微软雅黑","Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,"FreeSans","Arimo","Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","Arial","sans-serif";
+        }
+        body{
+          font-size: 20px;
+          background: #eee;
+        }
+        button{
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background: #07d;
+        color: #fff;
+        font-size: 25px;
+        }
+        textarea{
+          height: 35px;
+          width: 80%;
+          font-size: 18px;
+        }
+        .xgoing0 {
+            position: fixed;
+            top: -1%;
+            left: -1%;
+            height: 101%;
+            width: 101%;
+            cursor: none;
+            color: #fff;
+            background-color: #000000;
+        }
+        .xgoing1 {
+            position: fixed;
+            top: -1%;
+            left: -1%;
+            height: 101%;
+            width: 101%;
+            cursor: none;
+            color: #fff;
+            transition: all .7s;
+            background-color: #000000;
+            animation: xgoing1ani 10s linear infinite 0s;
+        }
+        @keyframes xgoing1ani {
+            0% {
+                background: #00284f;
+            }
+            25% {
+                background: #004b96;
+            }
+            50% {
+                background: #0066c7;
+            }
+            50% {
+                background: #004b96;
+            }
+            100% {
+                background: #00284f;
+            }
+        }
+            #oobeend {
+                display: none;
+                ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                color: #fff;
+                background: #000;
+                /*cursor: none;*/
+            }   
+            #oobeword01,
+            #oobeword02 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 50px;
+                z-index: 1000;
+            }
+    
+            #oobeword1 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 50px;
+                z-index: 1000;
+            }
+    
+            #oobeword2 {
+                display: none;
+                position: absolute;
+                bottom: 5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: 100;
+                text-align: center;
+                font-size: 20px;
+                z-index: 1000;
+            }
+    
+            @keyframes oobe1 {
+                0% {
+                    opacity: 0;
+                }
+                6% {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes oobe0 {
+                0% {
+                    opacity: 0;
+                }
+                90% {
+                    opacity: 1;
+                }
+            }
