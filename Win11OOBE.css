@@ -1,0 +1,189 @@
+        * {
+            font-family: "微软雅黑","Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,"FreeSans","Arimo","Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","Arial","sans-serif";
+        }
+        body{
+          font-size: 20px;
+          background: #eee;
+          overflow: hidden;
+          -ms-content-zooming: none;
+          -ms-high-contrast-adjust: none;
+        }
+        button{
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background: #07d;
+        color: #fff;
+        font-size: 25px;
+        }
+        textarea{
+          height: 35px;
+          width: 80%;
+          font-size: 18px;
+        }
+#drape {
+z-index: 10000;
+}
+#playback_canvas, #playback_canvas_rtl, #trythislater_overlay_canvas, .sequence {
+visibility: hidden;
+position: absolute;
+}
+#end_sequence_canvas, #pre_end_sequence, #end_sequence, #drape, .fullscreen_color {
+position: absolute;
+top: 0px;
+left: 0px;
+}
+.xgoing0{
+position: absolute;
+top: -1%;
+left: -1%;
+height: 101%;
+width: 101%;
+color: #fff;
+background-color: #000;
+cursor: none;
+}
+
+            #oobeend {
+                display: none;
+                ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                color: #fff;
+                background: #000;
+                /*cursor: none;*/
+            }   
+            #oobeword01,
+            #oobeword02 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: ;
+                text-align: center;
+                font-size: 40px;
+                z-index: 1000;
+            }
+            #oobeword1 {
+                display: none;
+                position: absolute;
+                top: 44.5%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: ;
+                text-align: center;
+                font-size: 40px;
+                z-index: 1000;
+            }   
+            #oobeword2 {
+                display: none;
+                position: relative;
+                top: 54%;
+                left: 0%;
+                width: 100%;
+                font-family: 微软雅黑;
+                font-weight: ;
+                text-align: center;
+                font-size: 20px;
+                z-index: 1000;
+            }
+@keyframes circle1Path {
+0%{
+top:50vh;
+left:50vw;
+width:5vw;
+height:5vw;
+opacity:0.5;
+}
+50%{
+top:0vh;
+left:45vw;
+width:60vw;
+height:60vw;
+opacity: 1;
+}
+100%{
+top:50vh;
+left:50vw;
+width:5vw;
+height:5vw;
+opacity:0.5;
+}
+}
+@keyframes circle2Path {
+0%{
+top:40vh;
+left:45vw;
+width:15vw;
+height:15vw;
+}
+50%{
+top:37vh;
+left:-10vw;
+width:80vw;
+height:80vw;
+}
+100%{
+top:40vh;
+left:45vw;
+width:15vw;
+height:15vw;
+}
+}
+@keyframes circle3Path {
+0%{
+top:30vh;
+left:30vw;
+width:25vw;
+height:25vw;
+}
+50%{
+top:-50vh;
+left:-20vw;
+width:120vw;
+height:120vw;
+}
+100%{
+top:30vh;
+left:30vw;
+width:25vw;
+height:25vw;
+}
+}
+@keyframes fadeIn {
+0%{
+opacity: 0;
+}
+}
+@keyframes fadeCircleIn{
+0%{
+opacity:0;
+}
+100%{
+opacity: 1;
+}
+}
+.circle1{
+position: absolute;
+animation: circle1Path 15s infinite, fadeCircleIn 1332ms ease-out;
+border-radius: 100vw; 
+background: radial-gradient(50% 50% at 50% 50%, rgba(12, 119, 255, 0.3) 15.62%, rgba(12, 119, 255, 0) 100%);
+}
+.circle2{
+position: absolute;
+animation: circle2Path 20s infinite, fadeCircleIn 1332ms ease-out;
+border-radius: 100vw; 
+background: radial-gradient(50% 50% at 50% 50%, rgba(0, 56, 255, 0.3) 15.62%, rgba(12, 119, 255, 0) 100%);
+}
+.circle3{
+position: absolute;
+animation: circle3Path 30s infinite, fadeCircleIn 1332ms ease-out;
+border-radius: 100vw; 
+background: radial-gradient(50% 50% at 50% 50%, rgba(65, 56, 210, 0.5) 15.62%, rgba(65, 56, 210, 0) 100%);
+}
