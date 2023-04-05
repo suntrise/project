@@ -80,7 +80,7 @@ function getText() {
                 oobeword1.innerHTML = ""
                 oobeword1.style.display = "none";
                 window.temp_i = 0;
-                sto=setTimeout('oobeword1.innerHTML = text2;oobeword1.style.display = "block";oobeword2.style.display = "block";changertp7();', 128);
+                sto=setTimeout('oobeword1.innerHTML = text2;oobeword2.innerHTML = text2bot;oobeword1.style.display = "block";oobeword2.style.display = "block";changertp7();', 128);
                 return 0;
             }
             sto=setTimeout("changertp6();", 12);
