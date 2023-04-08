@@ -12,9 +12,13 @@ function getText() {
         period2 = periods2.value
 }
         function changertp() {
-        oobeword1.innerHTML = greet;
-        oobeword1.style.display = "block";
             xgoing.style.display="block";
+            oobeword1.style.display = "block";
+        if(grskip.checked){
+            changertp5()
+            }     
+        else{
+            oobeword1.innerHTML = greet;            
             window.temp_i = window.temp_i + 1;
             oobeword1.style.opacity = (window.temp_i/100);
             console.log(window.temp_i);
@@ -24,6 +28,7 @@ function getText() {
                 return 0;
             }
             sto = setTimeout("changertp();", 12);
+        }
         }
         function changertp2() {
             window.temp_i = window.temp_i - 1;
@@ -54,12 +59,15 @@ function getText() {
             console.log(window.temp_i);
             if (window.temp_i == 0) {
                 window.temp_i = 0;
-                sto = setTimeout('oobeword1.innerHTML = text1;oobeword2.innerHTML = textbot;oobeword2.style.display = "block";changertp5();', 128);
+                sto = setTimeout('changertp5();', 128);
                 return 0;
             }
             setTimeout("changertp4();", 12);
         }
         function changertp5() {
+            oobeword1.innerHTML = text1;
+            oobeword2.innerHTML = textbot;
+            oobeword2.style.display = "block";
             xgoing2.className="xgoing1";
             window.temp_i = window.temp_i + 1;
             oobeword1.style.opacity = (window.temp_i/100);
@@ -77,8 +85,6 @@ function getText() {
             oobeword1.style.opacity = (window.temp_i/100);
             console.log(window.temp_i);
             if (window.temp_i == 0) {
-                oobeword1.innerHTML = ""
-                oobeword1.style.display = "none";
                 window.temp_i = 0;
                 sto = setTimeout('oobeword1.innerHTML = text2;oobeword2.innerHTML = text2bot;changertp7();', 128);
                 return 0;
@@ -101,15 +107,20 @@ function getText() {
             oobeword1.style.opacity = (window.temp_i/100);
             console.log(window.temp_i);
             if (window.temp_i == 0) {
-                oobeword1.innerHTML = ""
-                oobeword1.style.display = "none";
                 window.temp_i = 0;
-                sto = setTimeout('xgoing2.className="xgoing0";oobeword1.style.top = "";oobeword1.innerHTML = end;oobeword2.style.display = "none";changertp9();', 128);
-                return 0;
+                sto = setTimeout('changertp9();', 128);
+                return 0; 
             }
             sto = setTimeout("changertp8();", 12);
         }
         function changertp9() {
+            if(grskip.checked){
+                changertp5()
+            }
+            else{
+            xgoing2.className="xgoing0";
+            oobeword1.innerHTML = end;
+            oobeword2.style.display = "none";
             window.temp_i = window.temp_i + 1;
             oobeword1.style.opacity = (window.temp_i/100);
             console.log(window.temp_i);
@@ -119,6 +130,7 @@ function getText() {
                 return 0;
             }
             sto = setTimeout("changertp9();", 12);
+        }
         }
         function changertp10() {
             //alert("Unexpected Error\nWindows not installed.");
