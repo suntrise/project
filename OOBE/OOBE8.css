@@ -42,25 +42,28 @@
         }
 @keyframes xgoing1ani {
       0%   {
-        background:green;
+        background: #00922c;
       }
       20%  {
-        background:#287BB5;
+        background:#1c77b2;
       }
-      40%  {
-        background:#601EB3;
+      35%  {
+        background:#5341c4;
       }
-      60%  {
-        background:#f03;
+      50%  {
+        background:#94077c;
       }
-      75%{
-        background: #FB0;
+      65%{
+        background: #c53f37;
       }
-      90%{
-        background: #23B9A0;
+      80%{
+        background: #c8964b;
+      }
+      95%{
+        background: #37a58e;
       }
       100% {
-        background:green;
+        background: #00922c;
       }
      }
             #oobeend {
@@ -75,7 +78,7 @@
                 background: #000;
                 /*cursor: none;*/
             }
-      #oobeword01,#oobeword02 {
+      #oobeword1{
                 display: none;
                 position: absolute;
                 top: 44.5%;
@@ -87,19 +90,6 @@
                 font-size: 55px;
                 z-index: 1000;
             }
-            #oobeword1 {
-                display: none;
-                position: absolute;
-                top: 44.5%;
-                left: 0%;
-                width: 100%;
-                font-family: 微软雅黑;
-                font-weight: 100;
-                text-align: center;
-                font-size: 55px;
-                z-index: 1000;
-            }
-    
             #oobeword2 {
                 display: none;
                 position: absolute;
