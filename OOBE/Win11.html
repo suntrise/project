@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>Windows 11 OOBE</title>
+<script src="OOBE11.js"></script>
+<link rel="stylesheet" type="text/css" href="OOBE11.css">
+</style>
 </head>
 <body>
 <div class="xgoing0" id="xgoing" style="display: none;">
@@ -18,7 +21,7 @@
 </div>
 </div>
 <a href="https://suntrise.github.io/">← 回到主页</a>
-<h2>Windows 11 OOBE 动画模拟 By STR <a href="https://github.com/suntrise/project" target="_blank">Github</a></h2> 
+<h2>Windows 11 OOBE 动画模拟 v1.2 By STR <a href="https://github.com/suntrise/project">Github</a></h2> 
 问候语1：<textarea id="greets">你好。</textarea><br>
 问候语2：<textarea id="greets1">正在为你作准备。</textarea><br>
 提示语1：<textarea id="texts1">此操作可能需要几分钟。</textarea><br>
@@ -27,19 +30,21 @@
 提示语4：<textarea id="textsbot">请勿关闭电脑。</textarea><br>
 结束语：<textarea id="ends">即将完成。</textarea><br>
 <br>
+第一阶段：<input type="text" id="periods1" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
+第二阶段：<input type="text" id="periods2" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
+第三阶段：<input type="text" id="periods3" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
+<br>
 字体：<input type="radio" name="font" id="songti">宋体
 <input type="radio" name="font" id="yahei" checked>微软雅黑
+<input type="checkbox" id="grskip">跳过问候语
 <br><br>
 <button onclick="window.temp_i = 0;changertp()">开始</button>
-（按 F11 进入全屏，按 Esc 退出）
-<br>动画由 <b>#微软</b> 提供（没错，它在 Win11 就是一个 html 文件，文件路径：%windir%\System32\oobe\FirstLogonAnim.htm）
+<button onclick="window.temp_i = 0;noText()">纯享版</button>
+动画由 <b>#微软</b> 提供（没错，它在 Win11 就是一个 html 文件，文件路径：%windir%\System32\oobe\FirstLogonAnim.htm）
 <br><br>
-<b>更多：<a href="https://suntrise.github.io/project/OOBE/Win8.html">Win8 OOBE</a>
+<b>更多：<a href="https://suntrise.github.io/project/OOBE/Win81.html">Win8.1 OOBE</a>
 <a href="https://suntrise.github.io/project/OOBE/Win10.html">Win10 OOBE</a>
-<a href="https://suntrise.github.io/project/yesmyfault">蓝屏模拟器</a>
+<a href="https://suntrise.github.io/yesmyfault">蓝屏模拟器</a>
 </b>
 </body>
 </html>
-
-<link rel="stylesheet" type="text/css" href="OOBE11.css">
-<script src="OOBE11.js"></script>
