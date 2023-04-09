@@ -7,10 +7,9 @@
 <head>
 <body>
 <div class="xgoing0" id="xgoing" style="display: none;">
-        <span id="oobeword01"></span>
-        <span id="oobeword02"></span>
         <span id="oobeword1"></span>
         <span id="oobeword2"></span>
+<div id="xgoing2" style="display: none;"></div>
 <div id="oobeend"></div>
 </div>
 
@@ -21,16 +20,24 @@
 提示语1：<textarea id="texts1">这可能需要几分钟</textarea><br>
 提示语2：<textarea id="texts2">一切交给我们来处理</textarea><br>
 底部：<textarea id="textsbot">请勿关闭电脑</textarea><br>
+底部2：<textarea id="texts2bot">请勿关闭电脑</textarea><br>
 吟诗：<textarea id="poems" style="height: 50px;">千门万户曈曈日，总把新桃换旧符<br>
 Windows 将保持 bug 最多状态，为你的网络之旅设置障碍</textarea><br>
 结束语：<textarea id="ends">马上就好</textarea><br>
 <br>
+第一阶段：<input type="text" id="periods1" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
+第二阶段：<input type="text" id="periods2" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
+第三阶段：<input type="text" id="periods3" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
+<br>
+<input type="checkbox" id="grskip">跳过问候语
+<br><br>
 <button onclick="window.temp_i = 0;changertp()">开始</button>
+<button onclick="window.temp_i = 0;noText()">纯享版</button>
 （按 F11 进入全屏，按 Esc 退出）
 <br><br>
-<b>更多：<a href="https://suntrise.github.io/project/OOBE/Win8.html">Win8 OOBE</a>
+<b>更多：<a href="https://suntrise.github.io/project/OOBE/Win81.html">Win8 OOBE</a>
 <a href="https://suntrise.github.io/project/OOBE/Win11.html">Win11 OOBE</a>
 <a href="https://suntrise.github.io/yesmyfault">蓝屏模拟器</a>
-<script src="OOBE.js"></script>
+<script src="OOBE10.js"></script>
 </body>
 </head>
