@@ -6,12 +6,19 @@ function getText() {
         text1 = texts1.value
         text2 = texts2.value
         textbot = textsbot.value
-        text2bot = texts2bot.value
         poem = poems.value
-        end = ends.value
+        end = ends.value       
         period1 = periods1.value
         period2 = periods2.value
         period3 = periods3.value
+    if (yahei.checked) {
+        oobeword1.style.fontFamily="微软雅黑";
+        oobeword2.style.fontFamily="微软雅黑";
+    }
+    if (songti.checked) {
+        oobeword1.style.fontFamily="宋体";
+        oobeword2.style.fontFamily="宋体";
+    }
 }
         function changertp() {
             xgoing.style.display="block";
@@ -67,8 +74,7 @@ function getText() {
             setTimeout("changertp4();", 12);
         }
         function changertp5() {
-            xgoing2.className = "xgoing1";
-            xgoing2.style.display = "block";
+            circle.style.display="block";
             oobeword1.innerHTML = text1;
             oobeword2.innerHTML = textbot;
             oobeword2.style.display = "block";
@@ -88,6 +94,8 @@ function getText() {
             oobeword1.style.opacity = (window.temp_i/100);
             console.log(window.temp_i);
             if (window.temp_i == 0) {
+                oobeword1.innerHTML = ""
+                oobeword1.style.display = "none";
                 window.temp_i = 0;
                 sto = setTimeout('changertp7();', 128);
                 return 0;
@@ -96,7 +104,8 @@ function getText() {
         }
         function changertp7() {
             oobeword1.innerHTML = text2;
-            oobeword2.innerHTML = text2bot;
+            oobeword1.style.display = "block";
+            oobeword2.style.display = "block";
             window.temp_i = window.temp_i + 1;
             oobeword1.style.opacity = (window.temp_i/100);
             console.log(window.temp_i);
@@ -115,7 +124,7 @@ function getText() {
                 oobeword1.innerHTML = ""
                 oobeword1.style.display = "none";
                 window.temp_i = 0;
-                sto = setTimeout('oobeword1.style.top = "38.7%";oobeword1.innerHTML = poem;oobeword1.style.display = "block";oobeword2.style.display = "block";changertp9();', 128);
+                sto = setTimeout('oobeword1.innerHTML = poem;oobeword1.style.display = "block";oobeword2.style.display = "block";changertp9();', 128);
                 return 0;
             }
             sto = setTimeout("changertp8();", 12);
@@ -147,7 +156,7 @@ function getText() {
                 changertp5()
             }
         else{
-            xgoing2.className="xgoing0";
+            circle.style.display = "none";
             oobeword1.style.top = "44.5%";
             oobeword1.innerHTML = end;
             oobeword2.style.display = "none";
@@ -169,26 +178,22 @@ function getText() {
             oobeword1.style.opacity = (window.temp_i/100);
             changertp()
         }
-
      function noText(){
         oobeword1.style.display = "none"
         oobeword2.style.display = "none"
-        xgoing2.className="xgoing1";
-        xgoing.style.display = "block"
-        xgoing2.style.display = "block"
+        xgoing.style.display = "block";
+        circle.style.display = "block"
         }
-
 function hotkey(){
-    var a=window.event.keyCode;
+var a=window.event.keyCode;
     if(a==27){
         xgoing.style.display="none";
-        xgoing2.className="xgoing0";
-        xgoing2.style.display="none";
         window.temp_i = 0;
         clearTimeout(sto)
+        circle.style.display = "none";
         oobeword1.style.display = "none";
         oobeword2.style.display = "none";
-    }
+}
 }
 window.onload = function(){
 document.onkeydown = hotkey;
