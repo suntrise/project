@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html>
+
+    <meta charset="UTF-8">
+    <title>Window 10 OOBE</title>
+<link rel="stylesheet" type="text/css" href="OOBE10.css">
 <head>
-<meta charset="utf-8">
-<title>Windows 11 OOBE</title>
-<script src="OOBE11.js"></script>
-<link rel="stylesheet" type="text/css" href="OOBE11.css">
-</style>
-</head>
 <body>
 <div class="xgoing0" id="xgoing" style="display: none;">
-        <span id="oobeword01"></span>
-        <span id="oobeword02"></span>
         <span id="oobeword1"></span>
         <span id="oobeword2"></span>
-<div class="circles" id="circle" style="display: none;">
-<div class="circle1"></div>
-<div class="circle2"></div>
-<div class="circle3"></div>
+<div id="xgoing2" style="display: none;"></div>
 <div id="oobeend"></div>
 </div>
-</div>
+
 <a href="https://suntrise.github.io/">← 回到主页</a>
-<h2>Windows 11 OOBE 动画模拟 v1.2 By STR <a href="https://github.com/suntrise/project" target="_blank">项目主页</a></h2> 
-问候语1：<textarea id="greets">你好。</textarea><br>
-问候语2：<textarea id="greets1">正在为你作准备。</textarea><br>
-提示语1：<textarea id="texts1">此操作可能需要几分钟。</textarea><br>
-提示语2：<textarea id="texts2">请保持PC开机并接通电源。</textarea><br>
-提示语3：<textarea id="poems" style="height: px;">好东西就要来了。</textarea><br>
-提示语4：<textarea id="textsbot">请勿关闭电脑。</textarea><br>
-结束语：<textarea id="ends">即将完成。</textarea><br>
+<h2>Windows 10 OOBE 动画模拟 v1.2 By STR <a href="https://github.com/suntrise/project" target="_blank">项目主页</a></h2> 
+问候语1：<textarea id="greets">嗨，别来无恙啊！</textarea><br>
+问候语2：<textarea id="greets1">一切即将准备就绪</textarea><br>
+提示语1：<textarea id="texts1">这可能需要几分钟</textarea><br>
+提示语2：<textarea id="texts2">一切交给我们来处理</textarea><br>
+底部：<textarea id="textsbot">请勿关闭电脑</textarea><br>
+底部2：<textarea id="texts2bot">请勿关闭电脑</textarea><br>
+吟诗：<textarea id="poems" style="height: 50px;">千门万户曈曈日，总把新桃换旧符<br>
+Windows 将保持 bug 最多状态，为你的网络之旅设置障碍</textarea><br>
+结束语：<textarea id="ends">马上就好</textarea><br>
 <br>
 第一阶段：<input type="text" id="periods1" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
 第二阶段：<input type="text" id="periods2" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
 第三阶段：<input type="text" id="periods3" style="height: 30px;width: 50px;font-size: 20px;" value="30">秒<br>
 <br>
-字体：<input type="radio" name="font" id="songti">宋体
-<input type="radio" name="font" id="yahei" checked>微软雅黑
 <input type="checkbox" id="grskip">跳过问候语
 <br><br>
 <button onclick="window.temp_i = 0;changertp()">开始</button>
 <button onclick="window.temp_i = 0;noText()">纯享版</button>
-动画由 <b>#微软</b> 提供（没错，它在 Win11 就是一个 html 文件，文件路径：%windir%\System32\oobe\FirstLogonAnim.htm）
+（按 F11 进入全屏，按 Esc 退出）
 <br><br>
 <b>更多：<a href="https://suntrise.github.io/project/OOBE/Win81.html">Win8.1 OOBE</a>
-<a href="https://suntrise.github.io/project/OOBE/Win10.html">Win10 OOBE</a>
+<a href="https://suntrise.github.io/project/OOBE/Win11.html">Win11 OOBE</a>
 <a href="https://suntrise.github.io/yesmyfault" target="_blank">蓝屏模拟器</a>
-</b>
+<script src="OOBE10.js"></script>
 </body>
-</html>
+</head>
