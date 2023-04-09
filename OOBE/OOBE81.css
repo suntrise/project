@@ -27,6 +27,7 @@
             cursor: none;
             color: #fff;
             background-color: #000000;
+            overflow: hidden;
         }
         .xgoing1 {
             position: fixed;
@@ -36,8 +37,9 @@
             width: 101%;
             cursor: none;
             color: #fff;
-            transition: all .7s;
+            overflow: hidden;
             background-color: #000000;
+            transition: all .7s;
             animation: xgoing1ani 20s linear infinite 0s;
         }
 @keyframes xgoing1ani {
@@ -66,18 +68,6 @@
         background: #00922c;
       }
      }
-            #oobeend {
-                display: none;
-                ;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                color: #fff;
-                background: #000;
-                /*cursor: none;*/
-            }
       #oobeword1{
                 display: none;
                 position: absolute;
