@@ -1,23 +1,3 @@
-        * {
-            font-family: "微软雅黑","Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,"FreeSans","Arimo","Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","Arial","sans-serif";
-        }
-        body{
-          font-size: 20px;
-          background: #eee;
-        }
-        button{
-        padding: 10px;
-        border: 1px solid #fff;
-        border-radius: 5px;
-        background: #07d;
-        color: #fff;
-        font-size: 25px;
-        }
-        textarea{
-          height: 35px;
-          width: 80%;
-          font-size: 18px;
-        }
         .xgoing0 {
             position: fixed;
             top: -1%;
@@ -27,6 +7,7 @@
             cursor: none;
             color: #fff;
             background-color: #000000;
+            overflow: hidden;
         }
         .xgoing1 {
             position: fixed;
@@ -37,6 +18,7 @@
             cursor: none;
             color: #fff;
             transition: all .7s;
+            overflow: hidden;
             background-color: #000000;
             animation: xgoing1ani 10s linear infinite 0s;
         }
@@ -69,19 +51,6 @@
                 background: #000;
                 /*cursor: none;*/
             }   
-            #oobeword01,
-            #oobeword02 {
-                display: none;
-                position: absolute;
-                top: 44.5%;
-                left: 0%;
-                width: 100%;
-                font-family: 微软雅黑;
-                font-weight: 100;
-                text-align: center;
-                font-size: 50px;
-                z-index: 1000;
-            }
     
             #oobeword1 {
                 display: none;
