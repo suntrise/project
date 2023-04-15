@@ -1,4 +1,4 @@
-      * {
+* {
             font-family: "微软雅黑","Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,"FreeSans","Arimo","Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","Arial","sans-serif";
         }
         body{
@@ -19,5 +19,5 @@
           font-size: 18px;
         }
         a{
-          outline: none;
+          text-decoration: none;
         }
