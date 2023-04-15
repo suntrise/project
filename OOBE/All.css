@@ -1,0 +1,23 @@
+      * {
+            font-family: "微软雅黑","Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,"FreeSans","Arimo","Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","Arial","sans-serif";
+        }
+        body{
+          font-size: 20px;
+          background: #eee;
+        }
+        button{
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background: #07d;
+        color: #fff;
+        font-size: 25px;
+        }
+        textarea{
+          height: 35px;
+          width: 80%;
+          font-size: 18px;
+        }
+        a{
+          outline: none;
+        }
