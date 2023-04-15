@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Windows 8 OOBE</title>
+</head>
+  <h2>Windows 8 的 OOBE 动画还在制作中~</h2>
+  <h2>不如先看看 Windows 8.1 的？（网址：<a href="https://suntrise.github.io/project/OOBE/Win81.html">https://suntrise.github.io/project/OOBE/Win81.html</a>）<br>
+    (<span id="time">5</span>秒后跳转到 Win8.1 OOBE）</h2>
+</html>
+<script type="text/javascript">
+ctd = setInterval(jump,1000)
+  var t=5
+  function jump(){
+    t--
+    time.innerHTML = t;
+    if(t==0){
+    window.location.href = 'https://suntrise.github.io/project/OOBE/Win81.html';
+    t=0
+    clearInterval()
+    }
+  }
+</script>
