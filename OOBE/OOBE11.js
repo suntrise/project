@@ -21,6 +21,7 @@ function getText() {
     }
 }
         function changertp() {
+            document.getElementsByTagName('body')[0].style.overflow="hidden"
             xgoing.style.display="block";
             oobeword1.style.display = "block";
         if(grskip.checked){
@@ -187,6 +188,7 @@ function getText() {
 function hotkey(){
 var a=window.event.keyCode;
     if(a==27){
+         document.getElementsByTagName('body')[0].style.overflow="visible"
         xgoing.style.display="none";
         window.temp_i = 0;
         clearTimeout(sto)
