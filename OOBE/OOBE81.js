@@ -13,6 +13,7 @@ function getText() {
 }
         function changertp() {
             xgoing.style.display="block";
+            xgoing2.style.display="none";
             oobeword1.style.display = "block";
         if(grskip.checked){
             changertp5()
@@ -37,12 +38,14 @@ function getText() {
             if (window.temp_i == 0) {
                 oobeword1.style.display = "none";
                 window.temp_i = 0;
-                sto = setTimeout('oobeword1.innerHTML = greet1;oobeword1.style.display = "block";changertp3();', 128);
+                sto = setTimeout('changertp3();', 128);
                 return 0;
             }
             sto = setTimeout("changertp2();", 12);
         }
         function changertp3() {
+            oobeword1.innerHTML = greet1;
+            oobeword1.style.display = "block";
             window.temp_i = window.temp_i + 1;
             oobeword1.style.opacity = (window.temp_i/100);
             console.log(window.temp_i);
@@ -68,6 +71,7 @@ function getText() {
             oobeword1.innerHTML = text1;
             oobeword2.innerHTML = textbot;
             oobeword2.style.display = "block";
+            xgoing2.style.display = "block";
             xgoing2.className="xgoing1";
             window.temp_i = window.temp_i + 1;
             oobeword1.style.opacity = (window.temp_i/100);
@@ -153,9 +157,9 @@ function hotkey(){
         xgoing.style.display="none";
         window.temp_i = 0;
         clearTimeout(sto)
-    xgoing2.className="xgoing0";
-    oobeword1.style.display = "none";
-    oobeword2.style.display = "none";
+        xgoing2.className="xgoing0";
+        oobeword1.style.display = "none";
+        oobeword2.style.display = "none";
     }
 }
 window.onload = function(){
