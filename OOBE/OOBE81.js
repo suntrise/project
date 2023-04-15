@@ -12,6 +12,7 @@ function getText() {
         period2 = periods2.value
 }
         function changertp() {
+             document.getElementsByTagName('body')[0].style.overflow="hidden"
             xgoing.style.display="block";
             xgoing2.style.display="none";
             oobeword1.style.display = "block";
@@ -154,6 +155,7 @@ function getText() {
 function hotkey(){
     var a=window.event.keyCode;
     if(a==27){
+         document.getElementsByTagName('body')[0].style.overflow="visible"
         xgoing.style.display="none";
         window.temp_i = 0;
         clearTimeout(sto)
