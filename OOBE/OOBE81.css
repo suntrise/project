@@ -1,23 +1,3 @@
-        * {
-            font-family: "微软雅黑","Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,"FreeSans","Arimo","Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","Arial","sans-serif";
-        }
-        body{
-          font-size: 20px;
-          background: #eee;
-        }
-        button{
-        padding: 10px;
-        border: 1px solid #fff;
-        border-radius: 5px;
-        background: #07d;
-        color: #fff;
-        font-size: 25px;
-        }
-        textarea{
-          height: 35px;
-          width: 80%;
-          font-size: 18px;
-        }
         .xgoing0 {
             position: fixed;
             top: -1%;
@@ -77,7 +57,7 @@
                 font-family: 微软雅黑;
                 font-weight: 100;
                 text-align: center;
-                font-size: 55px;
+                font-size: 50px;
                 z-index: 1000;
             }
             #oobeword2 {
@@ -89,24 +69,6 @@
                 font-family: 微软雅黑;
                 font-weight: 100;
                 text-align: center;
-                font-size: 30px;
+                font-size: 25px;
                 z-index: 1000;
-            }
-    
-            @keyframes oobe1 {
-                0% {
-                    opacity: 0;
-                }
-                6% {
-                    opacity: 1;
-                }
-            }
-    
-            @keyframes oobe0 {
-                0% {
-                    opacity: 0;
-                }
-                90% {
-                    opacity: 1;
-                }
             }
