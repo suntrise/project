@@ -1,8 +1,6 @@
 var str;
 var all = test = "";
 var a = b = 0;
-var de = "）";
-confirm(de.charCodeAt())
 
 //var ct = setInterval(addsp,1)
 
