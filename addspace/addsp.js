@@ -1,5 +1,5 @@
 var str;
-var all = test = a = b = "";
+var all = test = "";
 var a = b = j = k = 0;
 
 /* 测试
@@ -25,7 +25,7 @@ else if(a == 32){
 else{
 	j=0;
 }
-if (i>=2) {
+if (i>=1) {
 bl = str[Math.floor(i-1)]
 b = bl.charCodeAt()
 if((b >= 8216 && b <= 8223)||(b >= 12288 && b <= 12351)||(b >= 65281 && b <= 65374)){
@@ -41,13 +41,12 @@ else{
 	k=0;
 }
 }
-if (j+k == 1) {
+if (j+k == 1 && i >= 1) {
 	al = " "+al;
 }
 
-all += al;
+	all += al;
 	result.innerHTML = all;
-
 }
 	all=""
 	j=k=0;
