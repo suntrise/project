@@ -3,21 +3,31 @@
 <head>
     <title id="title">在语段的中英文间添加空格 v1.0</title>
 </head>
-<h2>在语段的中英文间添加空格 Beta <a href="https://suntrise.github.io/">返回主页</a> <a href="https://github.com/suntrise/project/tree/main/addspace" target="_blank">项目主页</a></h2>
+
+<a href="https://suntrise.github.io/" id="bkhome" style="font-size: 20px;">← 返回主页</a>
+<h2>在语段的中英文间添加空格 v2.0 </var> <a href="https://github.com/suntrise/project/tree/main/addspace" target="_blank">项目主页</a></h2>
 
 <textarea id="type" style="height: 300px;width: 45%;" placeholder="这是1个示例example。"></textarea>
 <textarea id="result" style="height: 300px;width: 45%;background: #eee;" placeholder="结果：这是 1 个示例 example。" readonly></textarea>
-<br>
-<button onclick="addsp()" style="font-size: 25px;">添加空格</button>
+<button onclick="addsp()" style="display: none;font-size: 25px;">添加空格</button>
+<button class="btn" id="copytc" data-clipboard-action="copy" data-clipboard-target="#result" style="position: relative;margin-bottom: 1%;font-size: 20px;">将结果复制到剪切板</button>
+<span id="copysuc"></span>
 
 <style type="text/css">
 	body{
 		font-family: Segoe UI, Microsoft YaHei;
+    font-size: 18px;
 		background: #f5f5f5;
 	}
+  a{
+    text-decoration: none;
+  }
 	textarea{
 		font-family: Segoe UI, Microsoft YaHei;
 		font-size: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: transparent;
 	}
 	button{
     padding: 10px;
@@ -31,4 +41,37 @@
     background: #15b;
 }
 </style>
+
 <script type="text/javascript" src="addsp.js"></script>
+<script type="text/javascript" src="clipboard.js/dist/clipboard.min.js"></script>
+<script>
+var clipboard = new ClipboardJS('.btn');
+var ctd;
+
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    ctd = setInterval(suc,1)
+
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
+var i = 0
+function suc(){
+if(i < 200){
+    i++
+    copysuc.innerHTML = "复制成功！"
+}
+if(i == 200){
+  copysuc.innerHTML = ""  
+  clearInterval(ctd)
+  i=0  
+}
+}
+</script>
