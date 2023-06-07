@@ -1,4 +1,3 @@
-var ver = "v2.0"
 var str;
 var all = test = "";
 var a = b = j = k = 0;
@@ -24,6 +23,9 @@ else if (a >= 11904 && a <= 193565){
 else if(a == 32){
 	j=3;
 }//空格为 3
+else if(a == 10){
+	j=4;
+}//换行为 4
 else{
 	j=0;
 }
@@ -39,6 +41,9 @@ else if (b >= 11904 && b <= 193565){
 else if(b == 32){
 	k=3;
 }//空格为 3
+else if(b == 10){
+	k=4;
+}//换行为 4
 else{
 	k=0;
 }
