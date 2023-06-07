@@ -2,6 +2,7 @@ var ver = "v2.0"
 var str;
 var all = test = "";
 var a = b = j = k = 0;
+var ct = setInterval(addsp,1)
 
 /* 测试
 var te = " "
