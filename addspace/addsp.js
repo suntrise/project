@@ -1,3 +1,4 @@
+var ver = "v2.0"
 var str;
 var all = test = "";
 var a = b = j = k = 0;
