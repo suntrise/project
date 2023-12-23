@@ -8,6 +8,7 @@
             color: #fff;
             background-color: #000000;
             overflow: hidden;
+            user-select: none;
         }
         .xgoing1 {
             position: fixed;
@@ -19,6 +20,7 @@
             color: #fff;
             transition: all .7s;
             overflow: hidden;
+            user-select: none;
             background-color: #000000;
             animation: xgoing1ani 10s linear infinite 0s;
         }
