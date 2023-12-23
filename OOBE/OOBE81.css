@@ -6,6 +6,7 @@
             width: 101%;
             cursor: none;
             color: #fff;
+            user-select: none;
             background-color: #000000;
             overflow: hidden;
         }
@@ -18,6 +19,7 @@
             cursor: none;
             color: #fff;
             overflow: hidden;
+            user-select: none;
             background-color: #000000;
             transition: all .7s;
             animation: xgoing1ani 20s linear infinite 0s;
