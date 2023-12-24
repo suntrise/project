@@ -1,17 +1,32 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML><!DOCTYPE HTML>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <meta charset="utf-8">
 <head>
     <title id="title">在语段的中英文间添加空格 v1.0</title>
 </head>
 
-<a href="https://suntrise.github.io/" id="bkhome" style="font-size: 20px;">← 返回主页</a>
-<h2>在语段的中英文间添加空格 v2.0 </var> <a href="https://github.com/suntrise/project/tree/main/addspace" target="_blank">项目主页</a></h2>
-
-<textarea id="type" style="height: 300px;width: 45%;" placeholder="这是1个示例example。"></textarea>
-<textarea id="result" style="height: 300px;width: 45%;background: #eee;" placeholder="结果：这是 1 个示例 example。" readonly></textarea>
+<a href="https://suntrise.github.io/" class="mdl-chip">
+    <span class="mdl-chip__text" style="font-size: 20px;">← 返回主页</span>
+</a>
+<div id="all" style="margin-left: 10%;">
+<h3>在语段的中英文间添加空格 v2.0 <a href="https://github.com/suntrise/project/tree/main/addspace" target="_blank" style="font-size: 25px;">项目主页</a></h3>
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 80%;border-radius:5px;font-size: 20px;">
+    <textarea class="mdl-textfield__input" type="text" rows= "5" id="type" style="font-size: 20px;" placeholder="这是1个示例example。"></textarea>
+    <label class="mdl-textfield__label" for="type"></label>
+  </div>
+</form><form action="#">
+  <div class="mdl-textfield mdl-js-textfield" style="width: 80%;border-radius:5px;font-size: 20px;">
+    <textarea class="mdl-textfield__input" type="text" rows= "5" id="result" style="font-size: 20px;background: #fff;" placeholder="结果：这是 1 个示例 example。"readonly="readonly"></textarea>
+    <label class="mdl-textfield__label" for="result"></label>
+  </div>
+</form>
 <button onclick="addsp()" style="display: none;font-size: 25px;">添加空格</button>
-<button class="btn" id="copytc" data-clipboard-action="copy" data-clipboard-target="#result" style="position: relative;margin-bottom: 1%;font-size: 20px;">将结果复制到剪切板</button>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="copytc" data-clipboard-action="copy" data-clipboard-target="#result" style="position: relative;margin-bottom: 1%;height: 50px;font-size: 20px;">将结果复制到剪切板</button>
 <span id="copysuc"></span>
+</div>
 
 <style type="text/css">
 	body{
@@ -45,7 +60,7 @@
 <script type="text/javascript" src="addsp.js"></script>
 <script type="text/javascript" src="clipboard.js/dist/clipboard.min.js"></script>
 <script>
-var clipboard = new ClipboardJS('.btn');
+var clipboard = new ClipboardJS('#copytc');
 var ctd;
 
 clipboard.on('success', function(e) {
